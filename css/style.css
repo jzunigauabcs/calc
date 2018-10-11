@@ -24,6 +24,7 @@ body {
 	padding: 8px;
 	padding-right: 27px;
 	text-align: right;
+	word-break: break-all;
 }
 .row {
 	width: 100%;
@@ -44,6 +45,7 @@ body {
 	height: 40px;
 	width: 40px;
 	transition: 0.3s;
+	outline: none;
 }
 .btn:hover {
 	cursor: pointer;
