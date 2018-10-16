@@ -44,12 +44,22 @@ const clearExpresion = function(expression) {
 }
 
 const clearExresionScreen = function (expression, char) {
+	let operators = /[\+|x|\-|\/]$/
 	let firstZero = /^0/
 	let number = /[0-9]/
+	let isPoint = /\./
+	let point = /\.$|\.\d$/
+
+	if(operators.test(char) && operators.test(expression))
+		return expression
 
 	if(firstZero.test(expression) && number.test(char)) {
 		expression = expression.replace(firstZero, '')
 	}
+
+	if(isPoint.test(char) && point.test(expression))
+		return expression
+
 	expression += char
 	return expression
 }
